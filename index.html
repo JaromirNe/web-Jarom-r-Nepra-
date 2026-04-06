@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wempoud</title>
+    <link rel="stylesheet" href="pages/styles.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li class="logo"><a href="index.html">LOGO</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/Projects.html">Projects</a></li>
+            <li><a href="pages/contacts.html">Contacts</a></li>
+            <li><a href="pages/info.html">Info</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h1 class="top">Recent Works</h1>
+
+<section class="features">      
+    <figure>
+        <img src="images/FLOWER.png" alt="Flower render">
+        <figcaption>Flower render</figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/mashine.png" alt="Maschine">
+        <figcaption>Maschine</figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/znamky.png" alt="Stamps">
+        <figcaption>Stamps</figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/corpsies.png" alt="Corpsies">
+        <figcaption>Corpsies</figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/punkl.png" alt="Punkl">
+        <figcaption>Punkcat</figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/HOTOVO-2.png" alt="Angry">
+        <figcaption>Inkbath</figcaption>
+    </figure>
+</section>
+
+<footer>© 2026 Jaromír Nepraš</footer>
+
+<script>
+window.addEventListener("load", () => {
+    const features = document.querySelector(".features");
+    const figures = document.querySelectorAll(".features figure");
+
+    features.classList.add("show");
+
+    figures.forEach((fig, index) => {
+        fig.style.transitionDelay = index * 0.15 + "s";
+    });
+});
+</script>
+
+</body>
+</html>

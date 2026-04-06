@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wempoud</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<header>
+    <nav>
+<ul>
+     <li class="logo"><a href="../index.html">LOGO</a></li>
+      <li><a href="../index.html">Home</a></li>
+    <li><a href="Projects.html">Projects</a></li>
+    <li><a href="contacts.html">Contacts</a></li>
+    <li><a href="info.html">info</a></li>
+</ul>
+    </nav>
+
+
+</header>
+
+<H1 class="top">Projects </H1>
+
+<section class="two-colums">      
+
+<figure class="foto1">
+<img src="../images/gif backspace.webp" alt="Corpsies-anim">
+<figcaption>Backspace-animation</figcaption>
+</figure>
+
+<div class="text1">
+    <h2><strong>Backspace</strong></h2>
+    <p>Backspace is a brand focused on skateboarding. It offers products designed specifically for sports use, while also serving as a platform for showcasing talent and producing a magazine that documents skateboarding culture and the creative community.</p>
+</div>
+
+</section>  
+</section>  
+
+<section class="two-colums">      
+
+<figure class="foto1">
+<img src="../images/kalendář.png" alt="Corpsies-anim">
+<figcaption>Calender 2026 - fotoshoot</figcaption>
+</figure>
+
+<div class="text1">
+    <h2><strong>Calender 2026</strong></h2>
+    <p>The calendar, designed as a practical tool for designers, is compact and user-friendly, fitting comfortably in hand. It provides a comprehensive overview of design-related events across the Czech Republic. Its minimalist design is enhanced by a growing bubble motif that progresses through the months from January to December.</p>
+</div>
+
+</section>  
+
+
+<section class="two-colums">      
+
+<figure class="foto1">
+<img src="../images/corpv.webp" alt="Corpsies-anim">
+<figcaption>Corspies-chief</figcaption>
+</figure>
+
+<div class="text1">
+    <h2><strong>CORPSIES</strong></h2>
+    <p>The topic of my graduation project is product promotion, with the product being original character figures from the brand Corpsies. These figures represent the emotions, moods, and exhaustion of people working in office environments (so-called desk jobs), which are associated with high demands, stress, and constant deadlines. The brand primarily targets this group of individuals who face these challenges on a daily basis.</p>
+</div>
+
+</section>  
+
+<section class="two-colums">      
+
+<figure class="foto1">
+<img src="../images/rager.png" alt="Corpsies-anim">
+<figcaption>rage-model</figcaption>
+</figure>
+
+<div class="text1">
+    <h2><strong>RAGE</strong></h2>
+    <p>Rage is a character I originally created for an animation. The inspiration came from indigenous tribes encountering modern technology and contemporary clothing. The goal was to blend traditional elements with modern ones and create a visually striking character with a unique story.</p>
+</div>
+
+</section>  
+<section class="two-colums">      
+
+<figure class="foto1">
+<img src="../images/render 2.png" alt="Corpsies-anim">
+<figcaption>Font</figcaption>
+</figure>
+
+
+<figure class="foto1">
+<img src="../images/Wires_poster_export-1.png" alt="Corpsies-anim">
+<figcaption>Wireframe-Poster</figcaption>
+</figure>
+
+
+<div class="text1">
+    <h2><strong>Wireframe</strong></h2>
+    <p>A font created from the outlines of 3D letter models. During its design, I aimed for the lowest possible polygon count to ensure maximum readability.</p>
+</div>
+
+</section>  
+<section class="two-colums">      
+
+<figure class="foto1">
+<img src="../images/remember.webp" alt="Corpsies-anim">
+<figcaption>Motion-Connection</figcaption>
+</figure>
+
+<div class="text1">
+    <h2><strong>Connection</strong></h2>
+    <p>A project focused on the protection of personal data, functioning as a form of anti-design that deliberately disrupts traditional visual principles while drawing attention to issues of digital security. At the same time, it serves as a visual representation of connectivity between people and the exchange of information in the modern world. The outcome is a kinetic poster that uses motion and evolving elements to emphasize the dynamic nature of data and its constant flow between individuals.</p>
+</div>
+
+</section>  
+<section class="two-colums">      
+
+<figure class="foto1">
+<img src="../images/on a rail.png" alt="Corpsies-anim">
+<figcaption>zine-showcase</figcaption>
+</figure>
+
+<div class="text1">
+    <h2><strong>ON A RAIL</strong></h2>
+    <p>A zine capturing long train journeys. I worked on this project exclusively while traveling to and from school, allowing it to authentically reflect my emotions, moods, and the atmosphere of these moments.</p>
+</div>
+
+</section>  
+
+
+
+
+
+
+
+<footer>© 2026 Jaromír Nepraš</footer>
+
+
+
+<body>
+    <section>
+
+
+
+</section>
+<script>
+const sections = document.querySelectorAll(".two-colums");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+
+            // ❗ zastaví sledování (lepší výkon + nebude se znovu animovat)
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.2   // začne dřív (20% elementu viditelné)
+});
+
+sections.forEach((section, index) => {
+    section.style.transitionDelay = index * 0.15 + "s"; // jemnější delay
+    observer.observe(section);
+});
+</script>
+</body>
+</html>
